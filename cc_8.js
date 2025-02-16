@@ -34,11 +34,11 @@ calculateServiceFee(500, "Standard");  //Test Data
 // Task 4 Parameters and Arguments, Scenario: Car Rental Cost Calculation
 
 function calculateRentalCost(days, carType, insurance = false) {
-    let carRates = { "Economy": 40, "Standard": 60, "Luxury": 100 };
+    let carRates = { "Economy": 40, "Standard": 60, "Luxury": 100 }; //establish prices per day
     let rentalCost = carRates[carType] * days;
-    if (insurance) rentalCost += 20 * days;
+    if (insurance) rentalCost += 20 * days;  //add insurance costs
     console.log(`Total Rental Cost: $${rentalCost}`);
-};
+};  //calculate rental costs
 
-calculateRentalCost(3, "Economy", true);
-calculateRentalCost(5, "Luxury", false); 
+calculateRentalCost(3, "Economy", true);  //Test Data
+calculateRentalCost(5, "Luxury", false);  //Test Data
