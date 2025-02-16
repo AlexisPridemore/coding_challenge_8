@@ -42,3 +42,14 @@ function calculateRentalCost(days, carType, insurance = false) {
 
 calculateRentalCost(3, "Economy", true);  //Test Data
 calculateRentalCost(5, "Luxury", false);  //Test Data
+
+// Task 5 Returning Values, Scenario: Loan Payment Calculation
+
+function calculateLoanPayment(principal, rate, time) {
+    let totalPayment = principal + (principal * rate * time);  //add and calulate each variable
+    return `Total Payment: $${totalPayment.toFixed(2)}`;
+};  //calculate and return total loan payment
+
+console.log(calculateLoanPayment(1000, 0.05, 2));  //Test Data
+console.log(calculateLoanPayment(5000, 0.07, 3));  //Test Data
+
