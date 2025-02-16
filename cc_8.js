@@ -62,3 +62,17 @@ function filterLargeTransactions(transactions, filterFunction) {
 
 let transactions = [200, 1500, 3200, 800, 2500];  //Declare array
 filterLargeTransactions(transactions, amount => amount > 1000);  //Test Data
+
+// Task 7  Closures, Scenario: Shopping Cart Tracker
+
+function createCartTracker() {
+    let totalCartValue = 0;
+    return function(itemPrice) {
+        totalCartValue += itemPrice;
+        return `Total Cart Value: $${totalCartValue}`;
+    };
+};
+
+let cart = createCartTracker();
+console.log(cart(20));
+console.log(cart(35));
