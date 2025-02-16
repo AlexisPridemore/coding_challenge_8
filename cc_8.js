@@ -17,3 +17,16 @@ const calculateDiscount =function(price, discountRate) {   //add discount
 
 console.log(calculateDiscount(100, 0.2));   //Test Data
 console.log(calculateDiscount(250, 0.15));  //Test Data
+
+// Task 3 Arrow Function, Scenario: Service Fee Calculation
+
+const calculateServiceFee = (amount, serviceType) => {  //function that applies a fee
+    let serviceFee = 0;
+    if (serviceType === "Premium") serviceFee = amount * 0.15;       //Premium fee
+    else if (serviceType === "Standard") serviceFee = amount * 0.10;  //Standard fee
+    else if (serviceType === "Basic") serviceFee = amount * 0.05;     //Basic fee
+    console.log(`Service Fee: $${serviceFee.toFixed(2)}`);
+}; //calculate service fee
+
+calculateServiceFee(200, "Premium");   //Test Data
+calculateServiceFee(500, "Standard");  //Test Data
