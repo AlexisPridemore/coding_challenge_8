@@ -30,3 +30,5 @@ const calculateServiceFee = (amount, serviceType) => {  //function that applies 
 
 calculateServiceFee(200, "Premium");   //Test Data
 calculateServiceFee(500, "Standard");  //Test Data
+
+
