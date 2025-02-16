@@ -67,12 +67,13 @@ filterLargeTransactions(transactions, amount => amount > 1000);  //Test Data
 
 function createCartTracker() {
     let totalCartValue = 0;
-    return function(itemPrice) {
+    return function(itemPrice) {  //add items to total
         totalCartValue += itemPrice;
-        return `Total Cart Value: $${totalCartValue}`;
-    };
+        return `Total Cart Value: $${totalCartValue}`;  //Log to console
+    };  //return a running total
 };
 
 let cart = createCartTracker();
-console.log(cart(20));
-console.log(cart(35));
+console.log(cart(20));  //Test Data
+console.log(cart(35));  //Test Data
+
