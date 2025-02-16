@@ -77,3 +77,12 @@ let cart = createCartTracker();
 console.log(cart(20));  //Test Data
 console.log(cart(35));  //Test Data
 
+// Task 8  Recursion in JavaScript, Scenario: Savings Growth Projection
+
+function calculateSavings(years, amount) {  //project savings growth
+    if (years === 10) return `Projected Savings: $${amount.toFixed(2)}`;  //Each year increases savings by 5% until reaching year 10
+    return calculateSavings(years + 1, amount * 1.05);
+}; //calculate savings
+
+console.log(calculateSavings(8, 1000));   //Test Data
+console.log(calculateSavings(5, 5000));   //Test Data
